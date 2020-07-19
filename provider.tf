@@ -1,0 +1,11 @@
+provider "aws" {
+	region = "ap-northeast-2"
+}
+resource "aws_instance" "example" {
+	ami = "ami-0e92198843e11ccee"
+	instance_type = "t2.micro"
+
+	tags = {
+		Name = "terraform-example-01"
+	}
+}
